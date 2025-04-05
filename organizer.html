@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer | Mausoof Nawazish</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <img class="backimg" src="assets/back2.png" alt="Background Image">
+    <nav>
+        <div class="logo">Mausoof Nawazish</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="organizer.html" class="active">Organizer</a></li>
+        </ul>
+        <button id="theme-toggle" class="toggle-btn">🌙</button>
+    </nav>
+
+    <section class="about-section">
+        <h1>🧰 Organizer Tools</h1>
+
+        <div class="tool-section">
+            <h2>🧮 Calculator</h2>
+            <input type="text" id="calc-display" readonly class="btn" style="width: 200px; margin-bottom: 10px;">
+            <div>
+                <button onclick="appendCalc('1')">1</button>
+                <button onclick="appendCalc('2')">2</button>
+                <button onclick="appendCalc('3')">3</button>
+                <button onclick="appendCalc('+')">+</button><br>
+                <button onclick="appendCalc('4')">4</button>
+                <button onclick="appendCalc('5')">5</button>
+                <button onclick="appendCalc('6')">6</button>
+                <button onclick="appendCalc('-')">-</button><br>
+                <button onclick="appendCalc('7')">7</button>
+                <button onclick="appendCalc('8')">8</button>
+                <button onclick="appendCalc('9')">9</button>
+                <button onclick="appendCalc('*')">*</button><br>
+                <button onclick="clearCalc()">C</button>
+                <button onclick="appendCalc('0')">0</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendCalc('/')">/</button>
+            </div>
+        </div>
+
+        <div class="tool-section">
+            <h2>💱 Currency Converter</h2>
+            <p>(Coming Soon...)</p>
+        </div>
+
+        <div class="tool-section">
+            <h2>🌡 Temperature by Region</h2>
+            <p>(Coming Soon...)</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mausoof Nawazish | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let calcDisplay = document.getElementById("calc-display");
+
+        function appendCalc(val) {
+            calcDisplay.value += val;
+        }
+
+        function clearCalc() {
+            calcDisplay.value = "";
+        }
+
+        function calculate() {
+            try {
+                calcDisplay.value = eval(calcDisplay.value);
+            } catch {
+                calcDisplay.value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
