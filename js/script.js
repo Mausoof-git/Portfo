@@ -26,3 +26,10 @@ toggleButton.addEventListener("click", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
     toggleButton.textContent = isDark ? "☀" : "🌙";
 });
+// Hamburger menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});

@@ -367,4 +367,73 @@
       background-color: #1f1f1f;
       box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     }
-    
+    /* Show nav normally on desktop */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide nav on mobile initially */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff; /* or dark depending on theme */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Default: hide hamburger icon on large screens */
+.menu-toggle {
+  display: none;
+}
+/* Desktop view */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Hide nav links by default on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white; /* adjust for dark mode too */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Default hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
