@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Mausoof Nawazish</title>
-    <link rel="stylesheet" href="css/styles.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Mausoof Nawazish</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <img class="backimg" src="assets/back2.png" alt="Background Image">
-    <nav>
+  <img class="backimg" src="assets/back2.png" alt="Background Image">
+
+  <header>
+    <nav class="navbar">
         <div class="logo">Mausoof Nawazish</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <button class="hamburger" id="hamburger">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="organizer.html" class="active">Organizer</a></li>
         </ul>
         <button id="theme-toggle" class="toggle-btn">🌙</button>
-    </nav>
-    
-    <section class="about-section">
-        <img src="assets/profile.jpeg" alt="Mausoof Nawazish" class="profile-img">
-        <h1>About Me</h1>
-        <p>
-            Hello! I'm <strong>Mausoof Nawazish</strong>, a passionate **Data Analyst** currently working at **DVVNL, Agra** as a PMA (MIS) for **WAPCOS Limited**.
-            I specialize in **data analysis, automation, and reporting** using Python, Excel, and Google Cloud tools.
-        </p>
+      </nav>
+  </header>
 
-        <h2>Skills & Expertise</h2>
-        <ul class="skills">
-        <a href="https://www.tutorialspoint.com/data_science/data_science_data_analysis.htm" class="btn">🔹 Data Analysis (Excel, Python, SQL)</a>
-        <a href="" class="btn">🔹 Google Sheets & Automation</a>
-        <a href="https://www.tutorialspoint.com/sap_mm/index.htm" class="btn">🔹 SAP MM (Learning)</a>
-        <a href="https://www.tutorialspoint.com/website_development/index.htm" class="btn">🔹 Web Development (HTML, CSS, Firebase, Python)</a>
-        <a href="https://www.tutorialspoint.com/advanced_excel/index.htm" class="btn">🔹 Advance MS Excel</a>
-        </ul>
-        
-        <a href="contact.html" class="btn">Contact Me</a>
-    </section>
+  <section class="hero">
+    <h1>About Me</h1>
+    <p>I'm Mausoof Nawazish, a Data Analyst working as PMA (MIS) at WAPCOS Limited.</p>
+    <p>I love working with data, dashboards, and automating things with Python and Excel.</p>
+  </section>
 
-    <footer>
-        <p>© 2025 Mausoof Nawazish | All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="year"></span> Mausoof Nawazish. All rights reserved.</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="js/test.js"></script>
 </body>
 </html>

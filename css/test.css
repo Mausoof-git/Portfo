@@ -1,11 +1,10 @@
-/* 🌐 Reset */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🌟 Base Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
@@ -25,20 +24,17 @@ img.backimg {
   opacity: 0.15;
 }
 
-/* 🧭 Navbar */
-header {
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
 }
 
 .logo {
@@ -74,7 +70,6 @@ nav {
   cursor: pointer;
 }
 
-/* 🌙 Theme Toggle */
 .toggle-btn {
   background: none;
   border: none;
@@ -82,12 +77,8 @@ nav {
   font-size: 1.2rem;
 }
 
-/* 👤 Hero Section */
+/* Hero Section */
 .hero {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-.project-section {
   padding: 5rem 2rem;
   text-align: center;
 }
@@ -115,7 +106,7 @@ nav {
   background-color: #555;
 }
 
-/* ⚓ Footer */
+/* Footer */
 footer {
   padding: 1rem;
   text-align: center;
@@ -123,13 +114,13 @@ footer {
   margin-top: 3rem;
 }
 
-/* 🌑 Dark Mode */
+/* 🔥 Dark Mode Styling */
 body.dark {
   background-color: #121212;
   color: #ddd;
 }
 
-body.dark header {
+body.dark .navbar {
   background-color: #1e1e1e;
 }
 
@@ -153,11 +144,7 @@ body.dark footer {
   color: #aaa;
 }
 
-body.dark .nav-links {
-  background: #1e1e1e;
-}
-
-/* 📱 Responsive Design */
+/* 🔄 Responsive */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -179,35 +166,8 @@ body.dark .nav-links {
   .hamburger {
     display: block;
   }
-}
-/* section for projects sections*/
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
 
-.project-card {
-  background-color: #fff;
-  padding: 1.2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background-color 0.3s;
-  cursor: pointer;
+  body.dark .nav-links {
+    background: #1e1e1e;
+  }
 }
-
-.project-card:hover {
-  transform: translateY(-5px);
-  background-color: #f0f0f0;
-}
-
-body.dark .project-card {
-  background-color: #1e1e1e;
-  color: #ddd;
-}
-
-body.dark .project-card:hover {
-  background-color: #333;
-}
-
